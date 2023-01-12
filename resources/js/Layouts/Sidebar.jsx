@@ -4,7 +4,7 @@ import NavLink from '../Components/NavLink';
 
 function Sidebar({setShowSidebar,showSidebar}) {
   const {url} = usePage();
-  console.log(url);
+ 
   return (
       <aside
           className={`${

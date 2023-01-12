@@ -13,7 +13,7 @@ function App({ children }) {
         <div className="">
             <Sidebar setShowSidebar={setShowSidebar} showSidebar={showSidebar} />
 
-            <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-900 text-slate-100">
+            <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-green-900 text-slate-100">
                 <ToggleMobile
                     showSidebar={showSidebar}
                     setShowSidebar={setShowSidebar}

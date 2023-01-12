@@ -8,7 +8,9 @@ function Modal({html,showModal,setShowModal }) {
           id="defaultModal"
           tabIndex={-1}
           aria-hidden="true"
-          className={`${showModal ? '' : 'hidden'} transition duration-200 ease-in fixed top-0 left-0 right-0 z-50 flex items-center justify-center w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full`}
+          className={`${
+              showModal ? "" : "hidden"
+          } transition duration-200 ease-in fixed top-0 left-0 right-0 z-50 flex items-center justify-center w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full`}
       >
           <div className="relative w-full h-full max-w-2xl md:h-auto">
               {/* Modal content */}
@@ -16,7 +18,7 @@ function Modal({html,showModal,setShowModal }) {
                   {/* Modal header */}
                   <div className="flex items-start justify-between p-4 border-b rounded-t ">
                       <h3 className="text-xl font-semibold text-gray-900 ">
-                        Details
+                          Details
                       </h3>
                       <button
                           type="button"
@@ -40,12 +42,14 @@ function Modal({html,showModal,setShowModal }) {
                       </button>
                   </div>
                   {/* Modal body */}
-                  <div className="p-6 space-y-6 " dangerouslySetInnerHTML={{__html : html}} />
+                  <div
+                      className="p-6 space-y-6 "
+                      dangerouslySetInnerHTML={{ __html: html }}
+                  />
                   {/* Modal footer */}
                   <div className="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b ">
-                    
                       <button
-                            onClick={()=> setShowModal(!showModal)}
+                          onClick={() => setShowModal(!showModal)}
                           data-modal-hide="defaultModal"
                           type="button"
                           className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10  dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"

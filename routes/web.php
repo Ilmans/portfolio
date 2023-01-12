@@ -23,3 +23,7 @@ Route::get('/portfolio', function (){
         'projects' => Project::orderBy('year','desc')->get()
     ]);
 });
+
+Route::get('/articles',fn() => inertia('Articles'));
+
+Route::get('/contact',fn()=> inertia('Contact'));

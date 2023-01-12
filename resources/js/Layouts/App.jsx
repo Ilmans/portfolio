@@ -1,9 +1,14 @@
+import { usePage } from "@inertiajs/inertia-react";
 import React, { useEffect, useState } from "react";
 import ToggleMobile from "../Components/ToggleMobile";
 import Sidebar from "./Sidebar";
 
 function App({ children }) {
     const [showSidebar, setShowSidebar] = useState(false);
+    const url = usePage();
+    useEffect(()=> {
+         setShowSidebar(false)
+    },[url])
     return (
         <div className="">
             <Sidebar setShowSidebar={setShowSidebar} showSidebar={showSidebar} />
@@ -13,14 +18,14 @@ function App({ children }) {
                     showSidebar={showSidebar}
                     setShowSidebar={setShowSidebar}
                 />
-                <div className=" text-white font-bold flex gap-x-2 items-center justify-end p-8">
+                <div className="flex items-center justify-end p-8 font-bold text-white gap-x-2">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="w-6 h-6 inline"
+                        className="inline w-6 h-6"
                     >
                         <path
                             strokeLinecap="round"
@@ -31,7 +36,7 @@ function App({ children }) {
                     <p className="inline">Next</p>
                 </div>
 
-                <div className="   min-h-screen  lg:ml-44 md:ml-44 px-12   md:mt-0  ">
+                <div className="min-h-screen px-12 lg:ml-44 md:ml-44 md:mt-0 ">
                     {children}
                 </div>
             </div>
